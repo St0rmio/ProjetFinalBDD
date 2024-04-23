@@ -1,3 +1,5 @@
+-- AUTHORS : Luc FRANCOIS, Kevin PETIT
+
 DELIMITER $
 DROP PROCEDURE IF EXISTS rapport_aires_de_stationnement $
 CREATE PROCEDURE rapport_aires_de_stationnement()

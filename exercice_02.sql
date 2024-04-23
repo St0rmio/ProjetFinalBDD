@@ -1,3 +1,4 @@
+-- AUTHORS : Luc FRANCOIS, Kevin PETIT
 -- ----------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $
 DROP PROCEDURE IF EXISTS creer_etudiant $

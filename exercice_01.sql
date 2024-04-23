@@ -1,3 +1,5 @@
+-- AUTHORS : Luc FRANCOIS, Kevin PETIT
+
 DELIMITER $
 DROP PROCEDURE IF EXISTS ajout_universite $
 CREATE PROCEDURE ajout_universite(

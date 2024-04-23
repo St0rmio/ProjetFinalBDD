@@ -1,3 +1,5 @@
+-- AUTHORS : Luc FRANCOIS, Kevin PETIT
+
 DELIMITER $
 DROP PROCEDURE IF EXISTS reserver_place_pour_etudiant $
 CREATE PROCEDURE reserver_place_pour_etudiant (

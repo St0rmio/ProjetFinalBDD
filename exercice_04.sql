@@ -1,3 +1,5 @@
+-- AUTHORS : Luc FRANCOIS, Kevin PETIT
+
 DELIMITER $
 DROP FUNCTION IF EXISTS generate_student_id $
 CREATE FUNCTION generate_student_id() RETURNS VARCHAR(10)
