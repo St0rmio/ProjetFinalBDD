@@ -22,6 +22,8 @@ BEGIN
 		SELECT 'Le format du numéro de téléphone est invalide' AS message_erreur;
 	ELSEIF EXISTS (SELECT * FROM etudiant WHERE etudiant.code_permanent = p_code_permanent) THEN
 		SELECT 'Un étudiant avec ce code permanent existe déjà.' AS message_erreur;
+	ELSEIF NOT EXISTS (SELECT * FROM universite WHERE universite.id_universite = p_id_universite) THEN
+		SELECT 'L''id de l''université n''existe pas' AS message_erreur;
 	ELSE
         -- Création de l'id de l'étudiant.
 		SET id_etudiant = generate_student_id();
@@ -75,6 +77,8 @@ BEGIN
 		SELECT 'Le format du numéro de téléphone est invalide' AS message_erreur;
 	ELSEIF NOT EXISTS (SELECT * FROM etudiant WHERE etudiant.id_etudiant = p_id_etudiant) THEN
 		SELECT 'Aucun étudiant trouvé avec cet id.' AS message_erreur;
+	ELSEIF NOT EXISTS (SELECT * FROM universite WHERE universite.id_universite = p_id_universite) THEN
+		SELECT 'L''id de l''université n''existe pas' AS message_erreur;
 	else
 		UPDATE etudiant
 		SET nom_etudiant = p_nom_etudiant, prenom_etudiant = p_prenom_etudiant, code_permanent = p_code_permanent, 
