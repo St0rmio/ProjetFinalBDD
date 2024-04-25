@@ -164,6 +164,11 @@ SELECT * FROM place_reservee;
 SELECT * FROM allee;
 SELECT * FROM place;
 
+
+
+INSERT INTO agent VALUES (42, "Francis", "Michel");
+INSERT INTO espace_surveille VALUES (42, 1, '2024-04-30 14:00:00', '2024-04-30 17:00:00');
+SELECT * FROM agent;
 CALL rapport_aires_de_stationnement();
 
 CREATE DATABASE test_sauvegarde;
