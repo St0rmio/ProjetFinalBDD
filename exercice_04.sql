@@ -80,3 +80,11 @@ BEGIN
 	END LOOP boucle;
 END $
 DELIMITER ;
+
+-- On active le gestionnaire d'évènements
+SET GLOBAL event_scheduler = ON;
+
+-- On active l'évènement nouvellement créé afin qu'il s'exécute de lui-même toutes les 5 minutes
+ALTER EVENT mise_à_jour_disponibilite_places
+ON COMPLETION PRESERVE
+ENABLE;
